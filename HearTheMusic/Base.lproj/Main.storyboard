@@ -1,25 +1,130 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AustinWeb-Roman.otf">
+            <string>AustinWeb-Roman</string>
+            <string>AustinWeb-Roman</string>
+            <string>AustinWeb-Roman</string>
+            <string>AustinWeb-Roman</string>
+            <string>AustinWeb-Roman</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Game Round Answer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameRoundAnswerViewController" customModule="HearTheMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="9hi-Hq-ROU"/>
+                        <viewControllerLayoutGuide type="bottom" id="nEC-TU-R5s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-Hn-O0A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfd-IX-gRJ">
+                                <rect key="frame" x="25" y="309" width="270" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HtF-Z6-i0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AustinWeb-Roman" family="Austin Web" pointSize="26"/>
+                                <state key="normal" title="Unison">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-rb-Nxd">
+                                <rect key="frame" x="25" y="371" width="270" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="e7U-Zr-IIk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AustinWeb-Roman" family="Austin Web" pointSize="26"/>
+                                <state key="normal" title="Major 2nd">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idI-8n-zaN">
+                                <rect key="frame" x="25" y="433" width="270" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="mJL-1B-3rk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AustinWeb-Roman" family="Austin Web" pointSize="26"/>
+                                <state key="normal" title="Minor 3rd">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anc-Yk-KgC">
+                                <rect key="frame" x="25" y="495" width="270" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dGh-HH-rge"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AustinWeb-Roman" family="Austin Web" pointSize="26"/>
+                                <state key="normal" title="Major 3rd">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-af-cNc">
+                                <rect key="frame" x="25" y="45" width="270" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Km4-ad-eGJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AustinWeb-Roman" family="Austin Web" pointSize="26"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RtU-fm-jOX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nEC-TU-R5s" firstAttribute="top" secondItem="anc-Yk-KgC" secondAttribute="bottom" constant="25" id="7D8-6O-4Vk"/>
+                            <constraint firstAttribute="trailing" secondItem="anc-Yk-KgC" secondAttribute="trailing" constant="25" id="8JL-SF-iaT"/>
+                            <constraint firstItem="HnR-af-cNc" firstAttribute="top" secondItem="9hi-Hq-ROU" secondAttribute="bottom" constant="25" id="A3M-lM-JoZ"/>
+                            <constraint firstItem="idI-8n-zaN" firstAttribute="top" secondItem="3c9-rb-Nxd" secondAttribute="bottom" constant="14" id="ENi-k2-svE"/>
+                            <constraint firstAttribute="trailing" secondItem="yfd-IX-gRJ" secondAttribute="trailing" constant="25" id="EiA-dN-qxV"/>
+                            <constraint firstItem="xmI-Hn-O0A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QqB-Vs-NdR"/>
+                            <constraint firstItem="nEC-TU-R5s" firstAttribute="top" secondItem="xmI-Hn-O0A" secondAttribute="bottom" id="XYD-lm-eVn"/>
+                            <constraint firstAttribute="trailing" secondItem="idI-8n-zaN" secondAttribute="trailing" constant="25" id="bBt-JN-6uW"/>
+                            <constraint firstItem="idI-8n-zaN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="bG9-Tv-fgA"/>
+                            <constraint firstItem="anc-Yk-KgC" firstAttribute="top" secondItem="idI-8n-zaN" secondAttribute="bottom" constant="14" id="bWx-pw-AXh"/>
+                            <constraint firstItem="anc-Yk-KgC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="dCx-AT-k6x"/>
+                            <constraint firstAttribute="trailing" secondItem="HnR-af-cNc" secondAttribute="trailing" constant="25" id="f54-J2-sPQ"/>
+                            <constraint firstItem="HnR-af-cNc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="fis-2W-QPN"/>
+                            <constraint firstItem="yfd-IX-gRJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="gLg-8P-oAs"/>
+                            <constraint firstItem="3c9-rb-Nxd" firstAttribute="top" secondItem="yfd-IX-gRJ" secondAttribute="bottom" constant="14" id="hSC-KN-tnM"/>
+                            <constraint firstItem="xmI-Hn-O0A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mCe-bv-shD"/>
+                            <constraint firstAttribute="trailing" secondItem="xmI-Hn-O0A" secondAttribute="trailing" id="oxH-Ys-nh5"/>
+                            <constraint firstAttribute="trailing" secondItem="3c9-rb-Nxd" secondAttribute="trailing" constant="25" id="sFI-Oo-LYf"/>
+                            <constraint firstItem="3c9-rb-Nxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="wBW-gL-z7j"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonAnswerFirst" destination="yfd-IX-gRJ" id="Xko-aq-Wpr"/>
+                        <outlet property="buttonAnswerFourth" destination="anc-Yk-KgC" id="UBu-WI-BeN"/>
+                        <outlet property="buttonAnswerSecond" destination="3c9-rb-Nxd" id="Qy1-iE-eUy"/>
+                        <outlet property="buttonAnswerThird" destination="idI-8n-zaN" id="fkJ-6P-31D"/>
+                        <outlet property="buttonPlayQuestion" destination="HnR-af-cNc" id="TWe-tr-Aeq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="320" height="568"/>
+    </resources>
 </document>
