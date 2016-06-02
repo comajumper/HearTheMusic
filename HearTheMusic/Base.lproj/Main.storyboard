@@ -39,6 +39,9 @@
                                 <state key="normal" title="Unison">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cb7-OV-I70"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-rb-Nxd">
                                 <rect key="frame" x="25" y="371" width="270" height="48"/>
@@ -50,6 +53,9 @@
                                 <state key="normal" title="Major 2nd">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJB-pY-Nas"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idI-8n-zaN">
                                 <rect key="frame" x="25" y="433" width="270" height="48"/>
@@ -61,6 +67,9 @@
                                 <state key="normal" title="Minor 3rd">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5L-YS-CSx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anc-Yk-KgC">
                                 <rect key="frame" x="25" y="495" width="270" height="48"/>
@@ -72,6 +81,9 @@
                                 <state key="normal" title="Major 3rd">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lbz-11-pnm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-af-cNc">
                                 <rect key="frame" x="25" y="45" width="270" height="48"/>

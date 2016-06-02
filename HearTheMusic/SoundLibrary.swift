@@ -15,6 +15,16 @@ struct Note {
     }
 }
 
+struct Interval {
+    let name: String
+    
+    init(firstNote: String, secondNote: String) {
+        let firstNoteIndex = MusicLibrary().notes.indexOf(firstNote)!
+        let secondNoteIndex = MusicLibrary().notes.indexOf(secondNote)!
+        self.name = MusicLibrary().intervals[abs(firstNoteIndex - secondNoteIndex)]
+    }
+}
+
 struct MusicLibrary {
     
     let notes = [
@@ -22,7 +32,19 @@ struct MusicLibrary {
     ]
     
     let intervals = [
-        "Unison"
+        "Unison",
+        "Minor 2nd",
+        "Major 2nd",
+        "Minor 3rd",
+        "Major 3rd",
+        "Perfect 4th",
+        "Tritone",
+        "Perfect 5th",
+        "Minor 6th",
+        "Major 6th",
+        "Minor 7th",
+        "Major 7th",
+        "Octave"
     ]
     
 }
