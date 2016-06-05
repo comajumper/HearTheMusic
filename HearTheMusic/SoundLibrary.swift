@@ -9,26 +9,46 @@
 import Foundation
 
 struct Note {
-    let pitch: String
-    func audioFileURL() -> NSURL {
-        return NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(self.pitch, ofType: "aiff")!)
+    let name: String
+    let audioFileURL: NSURL
+    init(name: String) {
+        
+            self.name = name
+            self.audioFileURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "aiff")!)
+
     }
 }
 
 struct Interval {
     let name: String
+    let firstNote: Note
+    let secondNote: Note
     
     init(firstNote: String, secondNote: String) {
         let firstNoteIndex = MusicLibrary().notes.indexOf(firstNote)!
         let secondNoteIndex = MusicLibrary().notes.indexOf(secondNote)!
         self.name = MusicLibrary().intervals[abs(firstNoteIndex - secondNoteIndex)]
+        self.firstNote = Note(name: firstNote)
+        self.secondNote = Note(name: secondNote)
     }
 }
 
 struct MusicLibrary {
     
     let notes = [
-        "C3", "Db3", "D3", "Eb3", "E3", "F3", "Gb3", "G3", "Ab3", "A3", "Bb3", "B3"
+        "C3",
+        "Db3",
+        "D3",
+        "Eb3",
+        "E3",
+        "F3",
+        "Gb3",
+        "G3",
+        "Ab3",
+        "A3",
+        "Bb3",
+        "B3",
+        "C4"
     ]
     
     let intervals = [
@@ -46,5 +66,4 @@ struct MusicLibrary {
         "Major 7th",
         "Octave"
     ]
-    
 }

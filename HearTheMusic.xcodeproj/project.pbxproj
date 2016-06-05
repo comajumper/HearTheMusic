@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155DE5ED1D03693F0087D6C5 /* Piano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DE5EC1D03693F0087D6C5 /* Piano.swift */; };
+		15A490AE1D037804004D34AB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A490AD1D037804004D34AB /* GameLogic.swift */; };
 		15AC0C5C1CF1BA290025FAA0 /* AustinWeb-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15AC0C5A1CF1BA290025FAA0 /* AustinWeb-Light.otf */; };
 		15AC0C5D1CF1BA290025FAA0 /* AustinWeb-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15AC0C5B1CF1BA290025FAA0 /* AustinWeb-Roman.otf */; };
 		15AC0C631CF23ED40025FAA0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15AC0C621CF23ED40025FAA0 /* AVFoundation.framework */; };
 		15AC0C651CF2436E0025FAA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15AC0C641CF2436E0025FAA0 /* Images.xcassets */; };
+		15C652FE1D04885300F02188 /* C4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 15C652FD1D04885300F02188 /* C4.aiff */; };
 		15E25CA81CFCD1E100B5632D /* A3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 15E25C9D1CFCD1E100B5632D /* A3.aiff */; };
 		15E25CA91CFCD1E100B5632D /* Ab3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 15E25C9E1CFCD1E100B5632D /* Ab3.aiff */; };
 		15E25CAA1CFCD1E100B5632D /* B3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 15E25C9F1CFCD1E100B5632D /* B3.aiff */; };
@@ -51,10 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		155DE5EC1D03693F0087D6C5 /* Piano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piano.swift; path = ../Piano.swift; sourceTree = "<group>"; };
+		15A490AD1D037804004D34AB /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		15AC0C5A1CF1BA290025FAA0 /* AustinWeb-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AustinWeb-Light.otf"; sourceTree = "<group>"; };
 		15AC0C5B1CF1BA290025FAA0 /* AustinWeb-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AustinWeb-Roman.otf"; sourceTree = "<group>"; };
 		15AC0C621CF23ED40025FAA0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		15AC0C641CF2436E0025FAA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15C652FD1D04885300F02188 /* C4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = C4.aiff; sourceTree = "<group>"; };
 		15E25C9D1CFCD1E100B5632D /* A3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = A3.aiff; sourceTree = "<group>"; };
 		15E25C9E1CFCD1E100B5632D /* Ab3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Ab3.aiff; sourceTree = "<group>"; };
 		15E25C9F1CFCD1E100B5632D /* B3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = B3.aiff; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		15AC0C5F1CF23AF20025FAA0 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				15C652FD1D04885300F02188 /* C4.aiff */,
 				15E25C9D1CFCD1E100B5632D /* A3.aiff */,
 				15E25C9E1CFCD1E100B5632D /* Ab3.aiff */,
 				15E25C9F1CFCD1E100B5632D /* B3.aiff */,
@@ -166,6 +173,8 @@
 			children = (
 				15E264121CF053880018D86A /* AppDelegate.swift */,
 				15E264141CF053880018D86A /* GameRoundAnswerViewController.swift */,
+				15A490AD1D037804004D34AB /* GameLogic.swift */,
+				155DE5EC1D03693F0087D6C5 /* Piano.swift */,
 				15E25CB31CFE229300B5632D /* SoundLibrary.swift */,
 				15E264161CF053880018D86A /* Main.storyboard */,
 				15E2641E1CF053880018D86A /* LaunchScreen.storyboard */,
@@ -301,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C652FE1D04885300F02188 /* C4.aiff in Resources */,
 				15E25CAA1CFCD1E100B5632D /* B3.aiff in Resources */,
 				15E25CAC1CFCD1E100B5632D /* C3.aiff in Resources */,
 				15E25CB01CFCD1E100B5632D /* Eb3.aiff in Resources */,
@@ -342,7 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A490AE1D037804004D34AB /* GameLogic.swift in Sources */,
 				15E2641B1CF053880018D86A /* HearTheMusic.xcdatamodeld in Sources */,
+				155DE5ED1D03693F0087D6C5 /* Piano.swift in Sources */,
 				15E264151CF053880018D86A /* GameRoundAnswerViewController.swift in Sources */,
 				15E264131CF053880018D86A /* AppDelegate.swift in Sources */,
 				15E25CB41CFE229300B5632D /* SoundLibrary.swift in Sources */,
