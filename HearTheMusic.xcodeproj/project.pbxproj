@@ -28,7 +28,7 @@
 		15E25CB41CFE229300B5632D /* SoundLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E25CB31CFE229300B5632D /* SoundLibrary.swift */; };
 		15E25CB61CFE255E00B5632D /* Gb3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 15E25CB51CFE255E00B5632D /* Gb3.aiff */; };
 		15E264131CF053880018D86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E264121CF053880018D86A /* AppDelegate.swift */; };
-		15E264151CF053880018D86A /* GameRoundAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E264141CF053880018D86A /* GameRoundAnswerViewController.swift */; };
+		15E264151CF053880018D86A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E264141CF053880018D86A /* QuestionViewController.swift */; };
 		15E264181CF053880018D86A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E264161CF053880018D86A /* Main.storyboard */; };
 		15E2641B1CF053880018D86A /* HearTheMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15E264191CF053880018D86A /* HearTheMusic.xcdatamodeld */; };
 		15E264201CF053880018D86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E2641E1CF053880018D86A /* LaunchScreen.storyboard */; };
@@ -76,7 +76,7 @@
 		15E25CB51CFE255E00B5632D /* Gb3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Gb3.aiff; sourceTree = "<group>"; };
 		15E2640F1CF053880018D86A /* HearTheMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearTheMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E264121CF053880018D86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15E264141CF053880018D86A /* GameRoundAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundAnswerViewController.swift; sourceTree = "<group>"; };
+		15E264141CF053880018D86A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		15E264171CF053880018D86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15E2641A1CF053880018D86A /* HearTheMusic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HearTheMusic.xcdatamodel; sourceTree = "<group>"; };
 		15E2641F1CF053880018D86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				15E264121CF053880018D86A /* AppDelegate.swift */,
-				15E264141CF053880018D86A /* GameRoundAnswerViewController.swift */,
+				15E264141CF053880018D86A /* QuestionViewController.swift */,
 				15A490AD1D037804004D34AB /* GameLogic.swift */,
 				155DE5EC1D03693F0087D6C5 /* Piano.swift */,
 				15E25CB31CFE229300B5632D /* SoundLibrary.swift */,
@@ -355,7 +355,7 @@
 				15A490AE1D037804004D34AB /* GameLogic.swift in Sources */,
 				15E2641B1CF053880018D86A /* HearTheMusic.xcdatamodeld in Sources */,
 				155DE5ED1D03693F0087D6C5 /* Piano.swift in Sources */,
-				15E264151CF053880018D86A /* GameRoundAnswerViewController.swift in Sources */,
+				15E264151CF053880018D86A /* QuestionViewController.swift in Sources */,
 				15E264131CF053880018D86A /* AppDelegate.swift in Sources */,
 				15E25CB41CFE229300B5632D /* SoundLibrary.swift in Sources */,
 			);

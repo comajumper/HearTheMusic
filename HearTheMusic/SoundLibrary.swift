@@ -12,10 +12,8 @@ struct Note {
     let name: String
     let audioFileURL: NSURL
     init(name: String) {
-        
-            self.name = name
-            self.audioFileURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "aiff")!)
-
+        self.name = name
+        self.audioFileURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "aiff")!)
     }
 }
 

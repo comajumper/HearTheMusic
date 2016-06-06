@@ -22,7 +22,7 @@ class Game: NSObject {
     let roundsPerLevel: Int = 3
     
     // Текущий вопрос в раунде
-    var currentQuestion: Int = 7
+    var currentQuestion: Int = 1
     
     // Количество вопросов в раунде
     let questionsPerRound: Int = 7
@@ -61,18 +61,22 @@ class Game: NSObject {
         return Interval(firstNote: firstNote.name, secondNote: secondNote.name)
     }
     
+    // Создаем задание
     func nextQuestion() {
         if (self.currentQuestion > self.questionsPerRound) {
            print("Round \(self.currentRound) has ended!")
         } else {
+            print("Question \(self.currentQuestion)")
             let question = generateInterval()
             self.correctAnswer = question.name
             self.answers = generateAnswers(question.name)
             print(self.answers)
             print(self.correctAnswer)
         }
+        currentQuestion += 1
     }
     
+    // Генерируем варианты ответов в случайном порядке
     func generateAnswers(correctAnswer: String) -> [String] {
         let answerIndex = MusicLibrary().intervals.indexOf(correctAnswer)!
         var results = [correctAnswer]
@@ -100,30 +104,12 @@ class Game: NSObject {
         return results.shuffle()
     }
     
+    // Проверить ответ
     func checkAnswer(answer: String) -> Bool {
         return answer == self.correctAnswer
     }
     
 }
-
-
-//func generateRandomQuestion(round: Int) {
-//    let notes = MusicLibrary().notes
-//    let firstNoteIndex = Int(arc4random_uniform(UInt32(notes.count)))
-//    let direction = Int(arc4random_uniform(UInt32(2)))
-//    var secondNoteIndex: Int = 1
-//    if (direction < 0 && firstNoteIndex <= notes.count) {
-//        secondNoteIndex = firstNoteIndex + Int(arc4random_uniform(UInt32(round * 4)))
-//    } else {
-//        secondNoteIndex = firstNoteIndex - Int(arc4random_uniform(UInt32(round * 4)))
-//    }
-//    if (secondNoteIndex < 0) {
-//        secondNoteIndex = 0
-//        // Проблема частых унисонов
-//    }
-//    notesToPlay = [Note(pitch: notes[firstNoteIndex]), Note(pitch: notes[secondNoteIndex])]
-//    correctAnswer = Interval(firstNote: notesToPlay[0].pitch, secondNote: notesToPlay[1].pitch).name
-//}
 
 extension CollectionType {
     /// Return a copy of `self` with its elements shuffled

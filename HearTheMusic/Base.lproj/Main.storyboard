@@ -14,10 +14,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Game Round Answer View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameRoundAnswerViewController" customModule="HearTheMusic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="HearTheMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9hi-Hq-ROU"/>
                         <viewControllerLayoutGuide type="bottom" id="nEC-TU-R5s"/>
@@ -87,7 +87,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-af-cNc">
                                 <rect key="frame" x="25" y="45" width="270" height="48"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Km4-ad-eGJ"/>
                                 </constraints>
