@@ -31,7 +31,7 @@ class Game: NSObject {
     let musicLibrary = MusicLibrary()
     
     // Хранилище правильного ответа
-    var correctAnswer: String = ""
+    var correctAnswer: Interval = Interval(firstNote: "C3", secondNote: "C3")
 
     // Варианты ответов
     var answers: [String] = []
@@ -54,7 +54,7 @@ class Game: NSObject {
         if (secondNoteIndex > 12) {
             secondNoteIndex = secondNoteIndex - 12
         } else if (secondNoteIndex < 0) {
-            secondNoteIndex = secondNoteIndex + 12
+            secondNoteIndex = abs(secondNoteIndex)
         }
         let firstNote = Note(name: MusicLibrary().notes[firstNoteIndex])
         let secondNote = Note(name: MusicLibrary().notes[secondNoteIndex])
@@ -68,10 +68,10 @@ class Game: NSObject {
         } else {
             print("Question \(self.currentQuestion)")
             let question = generateInterval()
-            self.correctAnswer = question.name
+            self.correctAnswer = question
             self.answers = generateAnswers(question.name)
             print(self.answers)
-            print(self.correctAnswer)
+            print(self.correctAnswer.name)
         }
         currentQuestion += 1
     }
@@ -106,7 +106,7 @@ class Game: NSObject {
     
     // Проверить ответ
     func checkAnswer(answer: String) -> Bool {
-        return answer == self.correctAnswer
+        return answer == self.correctAnswer.name
     }
     
 }

@@ -10,15 +10,58 @@ import Foundation
 import AVFoundation
 
 struct Piano {
+	
+	var firstNoteAudioPlayer: AVAudioPlayer!
+	var secondNoteAudioPlayer: AVAudioPlayer!
+	var thirdNoteAudioPlayer: AVAudioPlayer!
+	var fourthNoteAudioPlayer: AVAudioPlayer!
+	var fifthNoteAudioPlayer: AVAudioPlayer!
+	var sixthNoteAudioPlayer: AVAudioPlayer!
+	var seventhNoteAudioPlayer: AVAudioPlayer!
+	
+	init(interval: Interval) {
+		self.firstNoteAudioPlayer = try! AVAudioPlayer(contentsOfURL: interval.firstNote.audioFileURL, fileTypeHint: nil)
+		self.secondNoteAudioPlayer = try! AVAudioPlayer(contentsOfURL: interval.secondNote.audioFileURL, fileTypeHint: nil)
+    }
+	
+	func playNote() {
+		self.firstNoteAudioPlayer.stop()
+		self.firstNoteAudioPlayer.currentTime = 0.0
+		self.firstNoteAudioPlayer.prepareToPlay()
+		self.firstNoteAudioPlayer.play()
+	}
+	
+	func playInterval() {
+		self.firstNoteAudioPlayer.stop()
+		self.firstNoteAudioPlayer.currentTime = 0.0
+		self.firstNoteAudioPlayer.prepareToPlay()
+		self.secondNoteAudioPlayer.stop()
+		self.secondNoteAudioPlayer.currentTime = 0.0
+		self.secondNoteAudioPlayer.prepareToPlay()
+		
+		self.firstNoteAudioPlayer.play()
+		
+		executeAfterDelay(0.5) {
+			self.secondNoteAudioPlayer.play()
+		}
+	}
     
-    func playInterval(interval: Interval) {
-        
+    init(note: Note) {
+        self.firstNoteAudioPlayer = try! AVAudioPlayer(contentsOfURL: note.audioFileURL, fileTypeHint: nil)
     }
     
-    func setupNoteAudioPlayer(note: Note) -> AVAudioPlayer? {
-        return try! AVAudioPlayer(contentsOfURL: note.audioFileURL, fileTypeHint: nil)
-    }
-    
+}
+
+// Отложенный запуск функции
+func executeAfterDelay(delay:Double, closure:()->()) {
+	dispatch_after(
+		dispatch_time(
+			DISPATCH_TIME_NOW,
+			Int64(delay * Double(NSEC_PER_SEC))
+		),
+		dispatch_get_main_queue(),
+		closure
+	)
 }
 
 //func playInterval(firstNote: Note, secondNote: Note) {

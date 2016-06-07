@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1522C5871D0772BB00191C69 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1522C5861D0772BB00191C69 /* icon.png */; };
 		155DE5ED1D03693F0087D6C5 /* Piano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DE5EC1D03693F0087D6C5 /* Piano.swift */; };
 		15A490AE1D037804004D34AB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A490AD1D037804004D34AB /* GameLogic.swift */; };
 		15AC0C5C1CF1BA290025FAA0 /* AustinWeb-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15AC0C5A1CF1BA290025FAA0 /* AustinWeb-Light.otf */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1522C5861D0772BB00191C69 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		155DE5EC1D03693F0087D6C5 /* Piano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piano.swift; path = ../Piano.swift; sourceTree = "<group>"; };
 		15A490AD1D037804004D34AB /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		15AC0C5A1CF1BA290025FAA0 /* AustinWeb-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AustinWeb-Light.otf"; sourceTree = "<group>"; };
@@ -74,17 +76,17 @@
 		15E25CA71CFCD1E100B5632D /* G3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = G3.aiff; sourceTree = "<group>"; };
 		15E25CB31CFE229300B5632D /* SoundLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundLibrary.swift; sourceTree = "<group>"; };
 		15E25CB51CFE255E00B5632D /* Gb3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Gb3.aiff; sourceTree = "<group>"; };
-		15E2640F1CF053880018D86A /* HearTheMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearTheMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E2640F1CF053880018D86A /* Hear Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hear Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E264121CF053880018D86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E264141CF053880018D86A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		15E264171CF053880018D86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15E2641A1CF053880018D86A /* HearTheMusic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HearTheMusic.xcdatamodel; sourceTree = "<group>"; };
 		15E2641F1CF053880018D86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15E264211CF053880018D86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15E264261CF053880018D86A /* HearTheMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearTheMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E264261CF053880018D86A /* Hear Me.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hear Me.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E2642A1CF053880018D86A /* HearTheMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearTheMusicTests.swift; sourceTree = "<group>"; };
 		15E2642C1CF053880018D86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15E264311CF053880018D86A /* HearTheMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearTheMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E264311CF053880018D86A /* Hear Me.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hear Me.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E264351CF053880018D86A /* HearTheMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearTheMusicUITests.swift; sourceTree = "<group>"; };
 		15E264371CF053880018D86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				15AC0C5A1CF1BA290025FAA0 /* AustinWeb-Light.otf */,
+				1522C5861D0772BB00191C69 /* icon.png */,
 				15AC0C5B1CF1BA290025FAA0 /* AustinWeb-Roman.otf */,
 			);
 			name = Resources;
@@ -157,13 +160,14 @@
 				15E264101CF053880018D86A /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		15E264101CF053880018D86A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15E2640F1CF053880018D86A /* HearTheMusic.app */,
-				15E264261CF053880018D86A /* HearTheMusicTests.xctest */,
-				15E264311CF053880018D86A /* HearTheMusicUITests.xctest */,
+				15E2640F1CF053880018D86A /* Hear Me.app */,
+				15E264261CF053880018D86A /* Hear Me.xctest */,
+				15E264311CF053880018D86A /* Hear Me.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		15E2640E1CF053880018D86A /* HearTheMusic */ = {
+		15E2640E1CF053880018D86A /* Hear Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15E2643A1CF053880018D86A /* Build configuration list for PBXNativeTarget "HearTheMusic" */;
+			buildConfigurationList = 15E2643A1CF053880018D86A /* Build configuration list for PBXNativeTarget "Hear Me" */;
 			buildPhases = (
 				15E2640B1CF053880018D86A /* Sources */,
 				15E2640C1CF053880018D86A /* Frameworks */,
@@ -218,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = HearTheMusic;
+			name = "Hear Me";
 			productName = HearTheMusic;
-			productReference = 15E2640F1CF053880018D86A /* HearTheMusic.app */;
+			productReference = 15E2640F1CF053880018D86A /* Hear Me.app */;
 			productType = "com.apple.product-type.application";
 		};
-		15E264251CF053880018D86A /* HearTheMusicTests */ = {
+		15E264251CF053880018D86A /* Hear MeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15E2643D1CF053880018D86A /* Build configuration list for PBXNativeTarget "HearTheMusicTests" */;
+			buildConfigurationList = 15E2643D1CF053880018D86A /* Build configuration list for PBXNativeTarget "Hear MeTests" */;
 			buildPhases = (
 				15E264221CF053880018D86A /* Sources */,
 				15E264231CF053880018D86A /* Frameworks */,
@@ -236,14 +240,14 @@
 			dependencies = (
 				15E264281CF053880018D86A /* PBXTargetDependency */,
 			);
-			name = HearTheMusicTests;
+			name = "Hear MeTests";
 			productName = HearTheMusicTests;
-			productReference = 15E264261CF053880018D86A /* HearTheMusicTests.xctest */;
+			productReference = 15E264261CF053880018D86A /* Hear Me.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		15E264301CF053880018D86A /* HearTheMusicUITests */ = {
+		15E264301CF053880018D86A /* Hear MeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15E264401CF053880018D86A /* Build configuration list for PBXNativeTarget "HearTheMusicUITests" */;
+			buildConfigurationList = 15E264401CF053880018D86A /* Build configuration list for PBXNativeTarget "Hear MeUITests" */;
 			buildPhases = (
 				15E2642D1CF053880018D86A /* Sources */,
 				15E2642E1CF053880018D86A /* Frameworks */,
@@ -254,9 +258,9 @@
 			dependencies = (
 				15E264331CF053880018D86A /* PBXTargetDependency */,
 			);
-			name = HearTheMusicUITests;
+			name = "Hear MeUITests";
 			productName = HearTheMusicUITests;
-			productReference = 15E264311CF053880018D86A /* HearTheMusicUITests.xctest */;
+			productReference = 15E264311CF053880018D86A /* Hear Me.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +289,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 15E2640A1CF053880018D86A /* Build configuration list for PBXProject "HearTheMusic" */;
+			buildConfigurationList = 15E2640A1CF053880018D86A /* Build configuration list for PBXProject "Hear Me" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -298,9 +302,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15E2640E1CF053880018D86A /* HearTheMusic */,
-				15E264251CF053880018D86A /* HearTheMusicTests */,
-				15E264301CF053880018D86A /* HearTheMusicUITests */,
+				15E2640E1CF053880018D86A /* Hear Me */,
+				15E264251CF053880018D86A /* Hear MeTests */,
+				15E264301CF053880018D86A /* Hear MeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -322,6 +326,7 @@
 				15E25CB21CFCD1E100B5632D /* G3.aiff in Resources */,
 				15AC0C5D1CF1BA290025FAA0 /* AustinWeb-Roman.otf in Resources */,
 				15E25CAE1CFCD1E100B5632D /* Db3.aiff in Resources */,
+				1522C5871D0772BB00191C69 /* icon.png in Resources */,
 				15E25CAF1CFCD1E100B5632D /* E3.aiff in Resources */,
 				15E25CB61CFE255E00B5632D /* Gb3.aiff in Resources */,
 				15AC0C651CF2436E0025FAA0 /* Images.xcassets in Resources */,
@@ -382,12 +387,12 @@
 /* Begin PBXTargetDependency section */
 		15E264281CF053880018D86A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 15E2640E1CF053880018D86A /* HearTheMusic */;
+			target = 15E2640E1CF053880018D86A /* Hear Me */;
 			targetProxy = 15E264271CF053880018D86A /* PBXContainerItemProxy */;
 		};
 		15E264331CF053880018D86A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 15E2640E1CF053880018D86A /* HearTheMusic */;
+			target = 15E2640E1CF053880018D86A /* Hear Me */;
 			targetProxy = 15E264321CF053880018D86A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,7 +508,7 @@
 				INFOPLIST_FILE = HearTheMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrythedesigner.HearTheMusic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hear Me";
 			};
 			name = Debug;
 		};
@@ -515,7 +520,7 @@
 				INFOPLIST_FILE = HearTheMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrythedesigner.HearTheMusic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hear Me";
 			};
 			name = Release;
 		};
@@ -526,8 +531,8 @@
 				INFOPLIST_FILE = HearTheMusicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrythedesigner.HearTheMusicTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HearTheMusic.app/HearTheMusic";
+				PRODUCT_NAME = "Hear Me";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hear Me.app/Hear Me";
 			};
 			name = Debug;
 		};
@@ -538,8 +543,8 @@
 				INFOPLIST_FILE = HearTheMusicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrythedesigner.HearTheMusicTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HearTheMusic.app/HearTheMusic";
+				PRODUCT_NAME = "Hear Me";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hear Me.app/Hear Me";
 			};
 			name = Release;
 		};
@@ -549,7 +554,7 @@
 				INFOPLIST_FILE = HearTheMusicUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrythedesigner.HearTheMusicUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hear Me";
 				TEST_TARGET_NAME = HearTheMusic;
 			};
 			name = Debug;
@@ -560,7 +565,7 @@
 				INFOPLIST_FILE = HearTheMusicUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrythedesigner.HearTheMusicUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hear Me";
 				TEST_TARGET_NAME = HearTheMusic;
 			};
 			name = Release;
@@ -568,7 +573,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15E2640A1CF053880018D86A /* Build configuration list for PBXProject "HearTheMusic" */ = {
+		15E2640A1CF053880018D86A /* Build configuration list for PBXProject "Hear Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15E264381CF053880018D86A /* Debug */,
@@ -577,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15E2643A1CF053880018D86A /* Build configuration list for PBXNativeTarget "HearTheMusic" */ = {
+		15E2643A1CF053880018D86A /* Build configuration list for PBXNativeTarget "Hear Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15E2643B1CF053880018D86A /* Debug */,
@@ -586,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15E2643D1CF053880018D86A /* Build configuration list for PBXNativeTarget "HearTheMusicTests" */ = {
+		15E2643D1CF053880018D86A /* Build configuration list for PBXNativeTarget "Hear MeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15E2643E1CF053880018D86A /* Debug */,
@@ -595,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15E264401CF053880018D86A /* Build configuration list for PBXNativeTarget "HearTheMusicUITests" */ = {
+		15E264401CF053880018D86A /* Build configuration list for PBXNativeTarget "Hear MeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15E264411CF053880018D86A /* Debug */,

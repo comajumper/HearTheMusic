@@ -12,6 +12,10 @@ import AVFoundation
 class QuestionViewController: UIViewController {
     
     var game = Game()
+	
+	// Generate default Piano
+	var musicPiano = Piano(interval: Interval(firstNote: "A3", secondNote: "B3"))
+	var correctAnswerType: String = ""
     
     // Create control outlets
     @IBOutlet weak var buttonPlayQuestion: UIButton!
@@ -41,6 +45,12 @@ class QuestionViewController: UIViewController {
         buttonAnswerSecond.setTitle(answers[1], forState: .Normal)
         buttonAnswerThird.setTitle(answers[2], forState: .Normal)
         buttonAnswerFourth.setTitle(answers[3], forState: .Normal)
+		
+		correctAnswerType = String(Mirror(reflecting: game.correctAnswer).subjectType)
+		
+		if (correctAnswerType == "Interval") {
+			musicPiano = Piano(interval: game.correctAnswer)
+		}
         
         for button in answerButtons {
             button.layer.cornerRadius = button.frame.size.height / 2
@@ -48,10 +58,12 @@ class QuestionViewController: UIViewController {
             button.alpha = 1.0
         }
     }
-    
+	
     // Action for Play button
     @IBAction func playQuestion(sender: AnyObject) {
-
+		if (correctAnswerType == "Interval") {
+			musicPiano.playInterval()
+		}
     }
     
     // User clicks an answer
@@ -86,7 +98,7 @@ class QuestionViewController: UIViewController {
             answer.layer.backgroundColor =
                 UIColor(red: 247/255, green: 114/255, blue: 101/255, alpha: 1.0).CGColor
             for button in answerButtons {
-                if(button.currentTitle == game.correctAnswer) {
+                if(button.currentTitle == game.correctAnswer.name) {
                     button.layer.backgroundColor =
                         UIColor(red: 185/255, green: 218/255, blue: 143/255, alpha: 1.0).CGColor
                 } else if (button != answer) {

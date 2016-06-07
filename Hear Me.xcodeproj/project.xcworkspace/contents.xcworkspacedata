@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HearTheMusic.xcodeproj">
+      location = "self:/usr/local/bin/dev/HearTheMusic/Hear Me.xcodeproj">
    </FileRef>
 </Workspace>
