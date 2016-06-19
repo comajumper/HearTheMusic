@@ -10,12 +10,12 @@ import UIKit
 import AVFoundation
 
 class QuestionViewController: UIViewController {
-    
-    var game = Game()
 	
-	// Generate default Piano
+	// Generate default params
+	let game = Game()
 	var musicPiano = Piano(interval: Interval(firstNote: "A3", secondNote: "B3"))
 	var correctAnswerType: String = ""
+	var currentRepetition: Int = 0
     
     // Create control outlets
     @IBOutlet weak var buttonPlayQuestion: UIButton!
@@ -23,6 +23,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var buttonAnswerSecond: UIButton!
     @IBOutlet weak var buttonAnswerThird: UIButton!
     @IBOutlet weak var buttonAnswerFourth: UIButton!
+    @IBOutlet weak var repetitionsLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     
     var answerButtons: [UIButton] = []
     
@@ -40,6 +42,12 @@ class QuestionViewController: UIViewController {
     }
     
     func prepareTheStage(answers: [String]) {
+        buttonPlayQuestion.alpha = 1.0
+        questionLabel.text = "Question \(game.currentQuestion)".uppercaseString
+        questionLabel.addTextSpacing()
+        repetitionsLabel.alpha = 1.0
+        repetitionsLabel.text = "\(game.maxQuestionRepetitions - currentRepetition) out of \(game.maxQuestionRepetitions) repetitions left"
+        
         // Round button corners
         buttonAnswerFirst.setTitle(answers[0], forState: .Normal)
         buttonAnswerSecond.setTitle(answers[1], forState: .Normal)
@@ -61,8 +69,17 @@ class QuestionViewController: UIViewController {
 	
     // Action for Play button
     @IBAction func playQuestion(sender: AnyObject) {
-		if (correctAnswerType == "Interval") {
-			musicPiano.playInterval()
+		if (currentRepetition < game.maxQuestionRepetitions) {
+			if (correctAnswerType == "Interval") {
+				musicPiano.playInterval()
+			}
+			currentRepetition += 1
+            if (currentRepetition == game.maxQuestionRepetitions) {
+                repetitionsLabel.text = "No more repetitions left"
+                buttonPlayQuestion.alpha = 0
+            } else {
+                repetitionsLabel.text = "\(game.maxQuestionRepetitions - currentRepetition) out of \(game.maxQuestionRepetitions) repetitions left"
+            }
 		}
     }
     
@@ -82,6 +99,8 @@ class QuestionViewController: UIViewController {
     
     func answerButtonClicked(answer: UIButton) {
         let success = game.checkAnswer(answer.currentTitle!)
+        
+        repetitionsLabel.alpha = 0
         
         if (success) {
             print("You've heard it. Great job!")
@@ -112,6 +131,7 @@ class QuestionViewController: UIViewController {
                 button.alpha = 0
             }
             self.executeAfterDelay(1) {
+                self.currentRepetition = 0
                 self.game.nextQuestion()
                 self.prepareTheStage(self.game.answers)
             }
@@ -130,33 +150,12 @@ class QuestionViewController: UIViewController {
             closure
         )
     }
-    
-    //
-//    // Play an interval
-//    func playInterval(firstNote: Note, secondNote: Note) {
-//        let firstNotePlayer: AVAudioPlayer!
-//        let secondNotePlayer: AVAudioPlayer!
-//        do {
-//            try firstNotePlayer = AVAudioPlayer(contentsOfURL: firstNote.audioFileURL(), fileTypeHint: nil)
-//            try secondNotePlayer = AVAudioPlayer(contentsOfURL: secondNote.audioFileURL(), fileTypeHint: nil)
-//            playNote(secondNotePlayer, start: 0.5, stop: 3, phase: 0.5)
-//            playNote(firstNotePlayer, start: 0.0, stop: 3, phase: 0.5)
-//        } catch {}
-//    }
-//    
-//    // Play a single note
-//    func playNote(player: AVAudioPlayer, start: Double, stop: Double, phase: Double) {
-//        let startTime = start * Double(NSEC_PER_SEC)
-//        let stopTime = stop * Double(NSEC_PER_SEC)
-//        // Start playback after delay
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(startTime)), dispatch_get_main_queue(), {
-//            player.stop()
-//            player.currentTime = phase
-//            player.play()
-//        })
-//        // Stop playback after delay
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(stopTime)), dispatch_get_main_queue(), {
-//            player.stop()
-//        })
-//    }
+}
+
+extension UILabel{
+    func addTextSpacing(){
+        let attributedString = NSMutableAttributedString(string: self.text!)
+        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(6), range: NSRange(location: 0, length: self.text!.characters.count))
+        self.attributedText = attributedString
+    }
 }

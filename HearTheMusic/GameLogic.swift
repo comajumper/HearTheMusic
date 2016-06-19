@@ -22,11 +22,14 @@ class Game: NSObject {
     let roundsPerLevel: Int = 3
     
     // Текущий вопрос в раунде
-    var currentQuestion: Int = 1
+    var currentQuestion: Int = 0
     
     // Количество вопросов в раунде
     let questionsPerRound: Int = 7
-    
+	
+	// Максимальное количество повторений вопроса
+	let maxQuestionRepetitions: Int = 5
+	
     // Словарь нот и интервалов
     let musicLibrary = MusicLibrary()
     
@@ -63,6 +66,7 @@ class Game: NSObject {
     
     // Создаем задание
     func nextQuestion() {
+		currentQuestion += 1
         if (self.currentQuestion > self.questionsPerRound) {
            print("Round \(self.currentRound) has ended!")
         } else {
@@ -73,7 +77,6 @@ class Game: NSObject {
             print(self.answers)
             print(self.correctAnswer.name)
         }
-        currentQuestion += 1
     }
     
     // Генерируем варианты ответов в случайном порядке
